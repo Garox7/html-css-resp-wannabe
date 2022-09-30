@@ -127,3 +127,29 @@ img {
 /************************************************
     SOLUZIONE RESPONSIVE
  ************************************************/
+
+ /* L'ERRORE "VOLUTO" STA NEL FATTO CHE IL CONTAINER HA UNA GRANDEZZA FISSA (LO SFONDO ROSA SI SOTTO DIMENSIONAVA QUANDO RESTRINGEVO IL DISPLAY), QUINDI L'IDEA E' STATA QUELLA DI SOVRASCRIVERE LA PRORPIETA' CON "AUTO" (ANCHE PERCHè SE LO SOVRASCRIVEVO CON UNA GRANDEZZA FISSA L'ERRORE SI RIPETEVA). COSI' FACENDO LO SFONDO ROSA NON SI SOTTODIMESIONAVA PIU' E MANTENEVA LE DIMENSIONI CORRETTE MAN MANO CHE RIDIMENSIONAVO IL DISPLAY. (?) */
+
+ @media screen and (max-width: 768px) {
+    .container {
+        width: auto;
+    }
+ }
+
+ @media  screen and (max-width: 480px) {
+    .container {
+        width: auto;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .lessons .col,
+    .steps .col,
+    .why-us .col-left,
+    .why-us .col-right {
+        width: 100%;
+        padding: 2rem;
+    }
+ }
